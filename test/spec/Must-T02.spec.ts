@@ -57,8 +57,9 @@ describe('Must-T02', function() {
 
     s.in(MailboxPage).interact(MailboxPage.button, 'delete').click();
     expect(s.in(MailboxPage).interact(MailboxPage.notification, 'deleted')).to.exist;
-    browser.waitUntil(() => {
-      return true;
+
+    browser.waitUntil(function() {
+      return !$('//span[text()="Conversation moved to Bin."]').isDisplayed();
     }, 30000);
   });
 

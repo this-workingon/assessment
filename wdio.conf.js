@@ -7,7 +7,7 @@ var config = {
   logLevel: 'error',
   bail: 0,
   baseUrl: 'https://www.gmail.com',
-  waitforTimeout: 10000,
+  waitforTimeout: 30000,
   connectionRetryTimeout: 90000,
   connectionRetryCount: 3,
   services: [
