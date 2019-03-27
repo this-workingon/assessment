@@ -13,6 +13,10 @@ export default class MailboxPage extends Page {
     send: '//div[text()="Send"]'
   }
 
+  static field: Interactable = {
+    search: '//input[@name="q"]'
+  }
+
   static notification: Interactable = {
     deleted: '//span[text()="Conversation moved to Bin."]',
     sent: '//span[text()="Message sent."]'
