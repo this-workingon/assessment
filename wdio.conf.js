@@ -45,13 +45,8 @@ if (process.env.CI) {
       maxInstances: 1,
       browserName: 'chrome',
       'tunnel-identifier': process.env.TRAVIS_JOB_NUMBER,
-      build: process.env.TRAVIS_BUILD_NUMBER
-    },
-    {
-      maxInstances: 1,
-      browserName: 'firefox',
-      'tunnel-identifier': process.env.TRAVIS_JOB_NUMBER,
-      build: process.env.TRAVIS_BUILD_NUMBER
+      build: process.env.TRAVIS_BUILD_NUMBER,
+      extendedDebugging: true
     }
   ];
 }
